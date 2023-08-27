@@ -44,11 +44,11 @@
             <div class="header-inner">
                 <div class="header-left">
                     <div class="logo-thumbnail logo-custom-css">
-                        <a class="logo-light" href="/Home/Index">
+                        <a class="logo-light" href="#">
                             <img src="/Content/Front/images/f1.png"
                                  alt="Metaverse-logo" width="100px">
                         </a>
-                        <a class="logo-dark" href="/Home/Index">
+                        <a class="logo-dark" href="#">
                             <img src="/Content/Front/images/f1.png"
                                  alt="Metaverse-logo" width="100px">
                         </a>
@@ -612,7 +612,7 @@
         });
 
         //$(".auth-form__btn").click(function () {
-        //    window.location.href = '/Home/Dashboard/' + $("#address").val();
+        //    window.location.href = '/meta/mydashboard/' + $("#address").val();
         //})
     </script>
 
@@ -2340,7 +2340,7 @@
         //            console.log('Buy result : -' + result);
         //            if (result.transactionHash) {
         //                alert('Invesmtent Successfully ');
-        //                // var url = "/SmartDashboard/Success1?userIDdd=" + USERID12 + "&amount=" + x + "&txthash=" + result.transactionHash;
+        //                // var url = "meta/mydashboard/Success1?userIDdd=" + USERID12 + "&amount=" + x + "&txthash=" + result.transactionHash;
         //                // window.location.href = url;
         //            }
         //            else { alert('Invesmtent failed' + result); }
@@ -2430,7 +2430,7 @@
                 console.log('login without metamask');
                 console.log(userid);
                 //var json = {"userid": userid };
-                var url = "/Home/Login?USERADDRESS=" + userid;
+                var url = "/meta/login?USERADDRESS=" + userid;
                 $("#showbutton").css('display', 'block');
                 $("#Hide").css('display', 'none');
                 window.location.href = url;
@@ -2443,9 +2443,9 @@
                         if (result2 != "0x0000000000000000000000000000000000000000") {
 
                             localStorage.setItem("loginaddress", result2);
-                            //location.href = "/Dashboard/Index";
+                            //location.href = "/meta/mydashboard";
                             //var url = "/Home2/SignIn1?userIDdd=" + result2;
-                            var url = "/Home/SignIn?userIDdd=" + result2;
+                            var url = "/meta/login?userIDdd=" + result2;
                             window.location.href = url;
                         } else {
                             alert('you are not a registered user, please register')
@@ -2466,9 +2466,9 @@
 
                             //localStorage.setItem("loginaddress", userid);
                             localStorage.setItem("loginaddress", result[1]);
-                            //location.href = "/Dashboard/Index";
+                            //location.href = "meta/mydashboard";
                             //var url = "/Home2/SignIn?userIDdd=" + result[1];
-                            var url = "/Home/SignIn?userIDdd=" + result[1];
+                            var url = "/meta/login?userIDdd=" + result[1];
                             window.location.href = url;
 
                         } else {
